@@ -7,6 +7,8 @@ import {
   Param,
   Delete,
   ParseIntPipe,
+  BadRequestException,
+  NotFoundException,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -39,6 +41,13 @@ export class UsersController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.usersService.remove(+id);
+    try {
+      return this.usersService.remove(+id);
+    } catch (error) {
+      if (error instanceof Error) throw new NotFoundException(error.message);
+      throw new BadRequestException(
+        'An error occurred while deleting the user',
+      );
+    }
   }
 }

@@ -1,0 +1,231 @@
+{
+  "info": {
+    "_postman_id": "b1f4c2a0-1d2e-4f3a-9c0b-fundamentosnest01",
+    "name": "fundamentos_nest",
+    "description": "Colección de endpoints del proyecto NestJS fundamentos_nest (App, Users, Player).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "App",
+      "item": [
+        {
+          "name": "Get Hello",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": ["{{baseUrl}}"],
+              "path": [""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Dos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/dos",
+              "host": ["{{baseUrl}}"],
+              "path": ["dos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tres",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/tres",
+              "host": ["{{baseUrl}}"],
+              "path": ["tres"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Producto by Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/producto/42",
+              "host": ["{{baseUrl}}"],
+              "path": ["producto", "42"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar (query + page)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/buscar/camisetas/2",
+              "host": ["{{baseUrl}}"],
+              "path": ["buscar", "camisetas", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar (query + page + limit)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/buscar/camisetas/2/10",
+              "host": ["{{baseUrl}}"],
+              "path": ["buscar", "camisetas", "2", "10"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ada Lovelace\",\n  \"age\": 36\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/users",
+              "host": ["{{baseUrl}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/users",
+              "host": ["{{baseUrl}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find One User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/users/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["users", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ada L.\",\n  \"age\": 37\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/users/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["users", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/users/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["users", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Player",
+      "item": [
+        {
+          "name": "Get All Players",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/player",
+              "host": ["{{baseUrl}}"],
+              "path": ["player"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Player by Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/player/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["player", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Player",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Lamine Yamal\",\n  \"position\": \"Delantero\",\n  \"equipo\": \"Barcelona\",\n  \"edad\": 18\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/player",
+              "host": ["{{baseUrl}}"],
+              "path": ["player"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
