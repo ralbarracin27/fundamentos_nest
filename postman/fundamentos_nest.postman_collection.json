@@ -220,6 +220,43 @@
           "response": []
         }
       ]
+    },
+    {
+      "name": "Game",
+      "item": [
+        {
+          "name": "Add Score",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"value\": 7\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/game/score",
+              "host": ["{{baseUrl}}"],
+              "path": ["game", "score"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Scores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/game/score",
+              "host": ["{{baseUrl}}"],
+              "path": ["game", "score"]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "variable": [
